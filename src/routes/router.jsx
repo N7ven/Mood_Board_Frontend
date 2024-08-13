@@ -13,10 +13,10 @@ function Router() {
     <Routes>
       <Route path="/" element={<AppLayout />}>
         <Route index path="dashboard" element={<Dashboard />} />
-        <Route index path="alert" element={<AlertHome />} />
-        <Route index path="specialday" element={<SpecialDay />} />
-        <Route index path="playback" element={<PlayBack />} />
-        <Route index path="settings" element={<Settings />} />
+        <Route path="alert" element={<AlertHome />} />
+        <Route path="specialday" element={<SpecialDay />} />
+        <Route path="playback" element={<PlayBack />} />
+        <Route path="settings" element={<Settings />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
