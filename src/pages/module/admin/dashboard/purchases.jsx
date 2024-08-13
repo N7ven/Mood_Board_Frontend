@@ -12,7 +12,7 @@ const columns = [
     headerName: '',
     renderCell: () => (
       <div className={styles.profileImg}>
-        <img src={Images.PROFILE} alt="user" width="26" />
+        <img src={Images.SHOPPING_BAG} alt="user" width="20" />
       </div>
     )
   },

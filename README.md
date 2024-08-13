@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="./public/nrLogo.png" alt="nrlogo" width="400" />
+  <img src="./public/N7_final-blue.svg" alt="nrlogo" width="400" />
 </p>
 
 <h1 align="center">React-Javascript Framework</h1>
 
 <p align="center">
   <b>A delightful way to building a React.js Application with beautiful code written in JavaScript.</b></br>
-  <sub>Made with ❤️ by <a href="https://neuralrays.ai/">Neuralrays</a>,and <a href="">Team</a></sub>
+  <sub>Made with ❤️ by <a href="https://n7banking.com/">n7banking</a>,and <a href="">Team</a></sub>
 </p>
 <br />
 

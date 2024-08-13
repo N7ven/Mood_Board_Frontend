@@ -38,6 +38,8 @@ export default {
   SEGMENT05: require('./images/segments/segment05.svg').default,
   SEGMENT06: require('./images/segments/segment06.svg').default,
 
+  SHOPPING_BAG: require('./images/icons/shoppingbag.svg').default,
+
   ADD: require('./images/icons/add.svg').default,
   LESS: require('./images/icons/less.svg').default
 };
