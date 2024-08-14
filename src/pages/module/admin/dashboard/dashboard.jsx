@@ -14,81 +14,265 @@ import GIF002 from 'assets/images/gif/gif002.gif';
 import GIF003 from 'assets/images/gif/gif003.gif';
 import GIF004 from 'assets/images/gif/gif004.gif';
 import GIF005 from 'assets/images/gif/gif005.gif';
+import C1 from 'assets/images/removable/customer01.png';
+import C2 from 'assets/images/removable/customer02.png';
+import C3 from 'assets/images/removable/customer03.png';
+
 import Purchases from './purchases';
 import History from './history';
 import TodayReport from './today-report';
 import styles from './dashboard.module.scss';
 
 const Dashboard = () => {
+  const [ showmemberHappy, setShowMemberHappy ] = React.useState(false);
+  const [ showmemberSurprised, setShowMemberSurprised ] = React.useState(false);
+  const [ showmemberConfused, setShowMemberConfused ] = React.useState(false);
+  const [ showmemberDisgusted, setShowMemberDisgusted ] = React.useState(false);
+  const [ showmemberContempt, setShowMemberContempt ] = React.useState(false);
+
   const [ value, setValue ] = React.useState('1');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+  const openShowmemberHappy = () => {
+    setShowMemberHappy(true);
+  };
+  const closeShowmemberHappy = () => {
+    setShowMemberHappy(false);
+  };
+
+  const openShowmemberSurprised = () => {
+    setShowMemberSurprised(true);
+  };
+  const closeShowmemberSurprised = () => {
+    setShowMemberSurprised(false);
+  };
+
+  const openShowmemberConfused = () => {
+    setShowMemberConfused(true);
+  };
+  const closeShowmemberConfused = () => {
+    setShowMemberConfused(false);
+  };
+
+  const openShowmemberDisgusted = () => {
+    setShowMemberDisgusted(true);
+  };
+  const closeShowmemberDisgusted = () => {
+    setShowMemberDisgusted(false);
+  };
+
+  const openShowmemberContempt = () => {
+    setShowMemberContempt(true);
+  };
+  const closeShowmemberContempt = () => {
+    setShowMemberContempt(false);
   };
   return (
     <div className={styles.dashboard_container}>
       <div className={styles.dashboard_data}>
         <div className={styles.chartContainer}>
           <ul className={styles.moodList}>
-            <li className={styles.happy}>
-              <div className={styles.emoji}>
-                <img src={Images.HAPPY} alt="Happy" width="24" />
+            <li>
+              <div className={`${styles.happy} ${styles.mood}`} onClick={openShowmemberHappy} role="button" tabIndex="0">
+                <div className={styles.emoji}>
+                  <img src={Images.HAPPY} alt="Happy" width="24" />
+                </div>
+                <div className={styles.txtCont}>
+                  <h6>Happy</h6>
+                  <h3>
+                    380
+                    <span>60%</span>
+                  </h3>
+                </div>
               </div>
-              <div className={styles.txtCont}>
-                <h6>Happy</h6>
-                <h3>
-                  380
-                  <span>60%</span>
-                </h3>
-              </div>
+              {showmemberHappy
+              && (
+                <ul>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.close} onClick={closeShowmemberHappy} role="button" tabIndex="0"><img src={Images.CLOSE} alt="User" /></a>
+                  </li>
+                </ul>
+              )}
             </li>
-            <li className={styles.surprised}>
-              <div className={styles.emoji}>
-                <img src={Images.SURPRISED} alt="surprised" width="24" />
+            <li>
+              <div className={`${styles.surprised} ${styles.mood}`} onClick={openShowmemberSurprised} role="button" tabIndex="0">
+                <div className={styles.emoji}>
+                  <img src={Images.SURPRISED} alt="surprised" width="24" />
+                </div>
+                <div className={styles.txtCont}>
+                  <h6>Surprised</h6>
+                  <h3>
+                    194
+                    <span>20%</span>
+                  </h3>
+                </div>
               </div>
-              <div className={styles.txtCont}>
-                <h6>Surprised</h6>
-                <h3>
-                  194
-                  <span>20%</span>
-                </h3>
-              </div>
+              {showmemberSurprised
+              && (
+                <ul>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.close} onClick={closeShowmemberSurprised} role="button" tabIndex="0"><img src={Images.CLOSE} alt="User" /></a>
+                  </li>
+                </ul>
+              )}
             </li>
-            <li className={styles.confused}>
-              <div className={styles.emoji}>
-                <img src={Images.CONFUSED} alt="confused" width="24" />
+            <li>
+              <div className={`${styles.confused} ${styles.mood}`} onClick={openShowmemberConfused} role="button" tabIndex="0">
+                <div className={styles.emoji}>
+                  <img src={Images.CONFUSED} alt="confused" width="24" />
+                </div>
+                <div className={styles.txtCont}>
+                  <h6>Confused</h6>
+                  <h3>
+                    86
+                    <span>8%</span>
+                  </h3>
+                </div>
               </div>
-              <div className={styles.txtCont}>
-                <h6>Confused</h6>
-                <h3>
-                  86
-                  <span>8%</span>
-                </h3>
-              </div>
+              {showmemberConfused
+              && (
+                <ul>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.close} onClick={closeShowmemberConfused} role="button" tabIndex="0"><img src={Images.CLOSE} alt="User" /></a>
+                  </li>
+                </ul>
+              )}
             </li>
-            <li className={styles.disgusted}>
-              <div className={styles.emoji}>
-                <img src={Images.DISGUSTED} alt="disgusted" width="24" />
+            <li>
+              <div className={`${styles.disgusted} ${styles.mood}`} onClick={openShowmemberDisgusted} role="button" tabIndex="0">
+                <div className={styles.emoji}>
+                  <img src={Images.DISGUSTED} alt="disgusted" width="24" />
+                </div>
+                <div className={styles.txtCont}>
+                  <h6>Disgusted</h6>
+                  <h3>
+                    67
+                    <span>7%</span>
+                  </h3>
+                </div>
               </div>
-              <div className={styles.txtCont}>
-                <h6>Disgusted</h6>
-                <h3>
-                  67
-                  <span>7%</span>
-                </h3>
-              </div>
+              {showmemberDisgusted
+              && (
+                <ul>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.close} onClick={closeShowmemberDisgusted} role="button" tabIndex="0"><img src={Images.CLOSE} alt="User" /></a>
+                  </li>
+                </ul>
+              )}
             </li>
-            <li className={styles.contempt}>
-              <div className={styles.emoji}>
-                <img src={Images.CONTEMPT} alt="contempt" width="24" />
+            <li>
+              <div className={`${styles.contempt} ${styles.mood}`} onClick={openShowmemberContempt} role="button" tabIndex="0">
+                <div className={styles.emoji}>
+                  <img src={Images.CONTEMPT} alt="contempt" width="24" />
+                </div>
+                <div className={styles.txtCont}>
+                  <h6>Contempt</h6>
+                  <h3>
+                    45
+                    <span>5%</span>
+                  </h3>
+                </div>
               </div>
-              <div className={styles.txtCont}>
-                <h6>Contempt</h6>
-                <h3>
-                  45
-                  <span>5%</span>
-                </h3>
-              </div>
+              {showmemberContempt
+              && (
+                <ul>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C1} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C2} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.user}><img src={C3} alt="User" /></a>
+                  </li>
+                  <li>
+                    <a className={styles.close} onClick={closeShowmemberContempt} role="button" tabIndex="0"><img src={Images.CLOSE} alt="User" /></a>
+                  </li>
+                </ul>
+              )}
             </li>
           </ul>
           <div className={styles.emotTrend}>

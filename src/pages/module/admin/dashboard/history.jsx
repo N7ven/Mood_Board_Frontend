@@ -69,7 +69,7 @@ const History = () => {
           <p>Happy</p>
         </header>
         <section>
-          <Box sx={{ height: 400, width: '100%' }}>
+          <Box sx={{ height: 368, width: '100%' }}>
             <DataGrid
               rows={rows}
               columns={columns}

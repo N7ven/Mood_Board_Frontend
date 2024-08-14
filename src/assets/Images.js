@@ -16,6 +16,7 @@ export default {
   LOGOUT: require('./images/icons/logout.svg').default,
   TWOFACTOR: require('./images/icons/twofactor.svg').default,
   COLLAPSE: require('./images/icons/collapse.svg').default,
+  CLOSE: require('./images/icons/close.svg').default,
 
   HAPPY: require('./images/emoji/happy.svg').default,
   SURPRISED: require('./images/emoji/surprised.svg').default,
